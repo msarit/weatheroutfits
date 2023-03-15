@@ -12,7 +12,7 @@ server.use(cors());
 
 server.get("/coordinates", (req, res) => {
   const params = new URLSearchParams({
-    q: "Albany,NY,US",
+    q: req.query.location,
     limit: 5,
     appid: API_KEY,
   }).toString();
