@@ -1,23 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
 
 function App() {
+  const [weatherDetails, setWeatherDetails] = React.useState("mock data");
+
+  async function getWeatherData(locationLat, locationLon) {
+    const weatherResponse = await fetch(
+      `http://localhost:8000/weather?lat=${locationLat}&lon=${locationLon}`
+    );
+    const weatherData = await weatherResponse.json();
+
+    setWeatherDetails(
+      `${weatherData.name}, ${weatherData.sys.country} | ${weatherData.weather[0].main}`
+    );
+  }
+
+  React.useEffect(() => {
+    const getLatLonData = async () => {
+      const latLonResponse = await fetch("http://localhost:8000/coordinates");
+      const latLonData = await latLonResponse.json();
+
+      getWeatherData(latLonData[0].lat, latLonData[0].lon);
+    };
+
+    getLatLonData();
+  });
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div id="weather-info">{weatherDetails}</div>
     </div>
   );
 }
