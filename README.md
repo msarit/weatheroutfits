@@ -14,5 +14,10 @@ You may need to create an `.env` file.
 
 ### Run the following commands each in a seperate console tab:
 
-npm run start (starts the frontend)
-npm run start:backend (starts the backend)
+Start the frontend:
+
+- npm run start
+
+Start the backend:
+
+- npm run start:backend

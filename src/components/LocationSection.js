@@ -38,7 +38,6 @@ function LocationSection({ setWeatherDetails }) {
         );
         const weatherData = await weatherResponse.json();
 
-        console.log(weatherData);
         setWeatherDetails({
           id: weatherData.weather[0].id,
           icon: weatherData.weather[0].icon,
