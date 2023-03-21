@@ -1,3 +1,5 @@
+import styles from "../styles/LocationField.module.css";
+
 function LocationField({
   location,
   setLocation,
@@ -8,18 +10,18 @@ function LocationField({
     <form
       onSubmit={(event) => {
         event.preventDefault();
-        setLocation("");
         setWeatherDetails(null);
         getWeatherData();
       }}
     >
-      <label htmlFor="location-field">Enter Your Location:</label>
       <input
         id="location-field"
+        className={styles.inputfield}
+        placeholder="Enter Location"
         value={location}
         onChange={(event) => setLocation(event.target.value)}
       />
-      <button>Submit</button>
+      <button className={styles.button}>Fetch!</button>
     </form>
   );
 }

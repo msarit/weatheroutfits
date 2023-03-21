@@ -1,3 +1,5 @@
+import styles from "../styles/LocationOption.module.css";
+
 function LocationOption({
   name,
   state,
@@ -7,15 +9,17 @@ function LocationOption({
   getWeatherData,
 }) {
   return (
-    <div>
+    <div className={styles.wrapper}>
       <p>
         {name} {state} {country}
       </p>
       <button
+        className={styles.button}
         onClick={() => {
+          // this setLocation is not setting :(
           setLocation(`${name},${state},${country}`);
           setMultipleLocations([]);
-          getWeatherData();
+          getWeatherData(`${name},${state},${country}`);
         }}
       >
         Choose

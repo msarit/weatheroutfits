@@ -1,5 +1,5 @@
 import React from "react";
-import "./App.css";
+import styles from "./styles/App.module.css";
 import LocationSection from "./components/LocationSection";
 import LocationName from "./components/LocationName";
 import WeatherCondition from "./components/WeatherCondition";
@@ -12,14 +12,18 @@ function App() {
   const [weatherDetails, setWeatherDetails] = React.useState(null);
 
   return (
-    <div className="App">
-      <h1>Weather App</h1>
+    <div className={styles.app}>
+      <h1>WEATHER OUTFITS</h1>
+      <h4>Get Your Weather & Outfit Forecast</h4>
       <LocationSection setWeatherDetails={setWeatherDetails} />
-      <div id="weather-section">
+      <div className={styles.weathersection}>
         <div id="weather-details">
           {weatherDetails && (
             <React.Fragment>
-              <LocationName name={weatherDetails.name} />
+              <LocationName
+                name={weatherDetails.name}
+                country={weatherDetails.country}
+              />
               <WeatherCondition desc={weatherDetails.desc} />
               <WeatherTemp tempK={weatherDetails.tempK} />
               <WeatherIcon weatherIcon={weatherDetails.icon} />
@@ -30,7 +34,10 @@ function App() {
           {weatherDetails && (
             <React.Fragment>
               <OutfitImage weatherCode={weatherDetails.id} />
-              <OutfitDescription weatherCode={weatherDetails.id} />
+              <OutfitDescription
+                weatherCode={weatherDetails.id}
+                tempK={weatherDetails.tempK}
+              />
             </React.Fragment>
           )}
         </div>
