@@ -8,7 +8,7 @@ Visit [Open Weather API](https://openweathermap.org/api); register and obtain a 
 
 ### In the `.env` file, enter the following:
 
-OPEN_WEATHER_API_KEY=<your free API key>
+OPEN_WEATHER_API_KEY=your-free-API-key
 
 You may need to create an `.env` file.
 
