@@ -1,4 +1,5 @@
 import LocationOption from "./LocationOption";
+import styles from "../styles/MultiLocationSection.module.css";
 
 function MultiLocationSection({
   multipleLocations,
@@ -7,8 +8,8 @@ function MultiLocationSection({
   getWeatherData,
 }) {
   return (
-    <div id="multiple-locations">
-      {multipleLocations.length > 1 &&
+    <div id="multiple-locations" className={styles.wrapper}>
+      {multipleLocations.length > 0 &&
         multipleLocations.map((data, index) => (
           <LocationOption
             key={index}

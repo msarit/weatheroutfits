@@ -1,0 +1,25 @@
+.wrapper {
+  width: 275px;
+  border-radius: 6px;
+  padding: 20px 12px;
+  margin: 12px;
+  background-color: darkblue;
+  font-size: 1.25rem;
+}
+
+.button {
+  background-color: #eeedeb;
+  border-radius: 6px;
+  border-width: 0;
+  box-sizing: border-box;
+  color: black;
+  cursor: pointer;
+  font-size: 1rem;
+  margin: 0px 8px;
+  outline: none;
+  padding: 8px 12px;
+}
+
+/* .button:hover {
+  background-color:
+} */
