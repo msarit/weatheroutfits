@@ -1,6 +1,6 @@
 import React from "react";
 
-function LocationName({ name, state, country }) {
+function LocationName({ name, country }) {
   return (
     <React.Fragment>
       <p>{name && name}</p>
