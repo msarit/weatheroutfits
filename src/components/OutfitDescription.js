@@ -27,7 +27,7 @@ function OutfitDescription({ weatherCode, tempK }) {
     outfitDesc = WEATHER_CODE_OUTFITS[weatherCode].outfitDesc;
   }
 
-  return <p>{outfitDesc}</p>;
+  return <p data-testid="outfit-desc">{outfitDesc}</p>;
 }
 
 export default OutfitDescription;

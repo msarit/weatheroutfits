@@ -3,12 +3,11 @@ import WeatherIcon from "./WeatherIcon";
 
 it("renders the expected image", () => {
   const iconCode = "10d";
+  const iconUrl = "https://openweathermap.org/img/wn/10d@4x.png";
 
   render(<WeatherIcon weatherIcon={iconCode} />);
 
   const testImage = screen.getByAltText(/weather-icon-img/i);
 
-  expect(testImage.src).toContain(
-    "https://openweathermap.org/img/wn/10d@4x.png"
-  );
+  expect(testImage.src).toContain(iconUrl);
 });

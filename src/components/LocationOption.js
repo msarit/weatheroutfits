@@ -16,7 +16,6 @@ function LocationOption({
       <button
         className={styles.button}
         onClick={() => {
-          // this setLocation is not setting :(
           setLocation(`${name},${state},${country}`);
           setMultipleLocations([]);
           getWeatherData(`${name},${state},${country}`);
