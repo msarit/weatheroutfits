@@ -18,10 +18,13 @@ function LocationField({
         id="location-field"
         className={styles.inputfield}
         placeholder="Enter Location"
+        data-cy="location-field"
         value={location}
         onChange={(event) => setLocation(event.target.value)}
       />
-      <button className={styles.button}>Fetch!</button>
+      <button className={styles.button} data-cy="fetch">
+        Fetch!
+      </button>
     </form>
   );
 }
