@@ -1,0 +1,30 @@
+{
+  "coord": { "lon": -77.0276, "lat": 38.9959 },
+  "weather": [
+    { "id": 800, "main": "Clear", "description": "clear sky", "icon": "01d" }
+  ],
+  "base": "stations",
+  "main": {
+    "temp": 286.94,
+    "feels_like": 285.6,
+    "temp_min": 285.15,
+    "temp_max": 288.87,
+    "pressure": 1023,
+    "humidity": 47
+  },
+  "visibility": 10000,
+  "wind": { "speed": 4.63, "deg": 320 },
+  "clouds": { "all": 0 },
+  "dt": 1698079786,
+  "sys": {
+    "type": 2,
+    "id": 2002779,
+    "country": "US",
+    "sunrise": 1698060322,
+    "sunset": 1698099555
+  },
+  "timezone": -14400,
+  "id": 4369596,
+  "name": "Silver Spring",
+  "cod": 200
+}

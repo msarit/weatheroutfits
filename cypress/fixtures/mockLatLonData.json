@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Silver Spring",
+    "local_names": { "en": "Silver Spring" },
+    "lat": 38.9959461,
+    "lon": -77.0276231,
+    "country": "US",
+    "state": "Maryland"
+  },
+  {
+    "name": "Silver Spring",
+    "lat": 40.0642636,
+    "lon": -76.4371856,
+    "country": "US",
+    "state": "Pennsylvania"
+  },
+  {
+    "name": "Silver Spring",
+    "lat": 43.1225256,
+    "lon": -87.9971463,
+    "country": "US",
+    "state": "Wisconsin"
+  },
+  {
+    "name": "Silver Spring",
+    "lat": 41.7892674,
+    "lon": -71.3675541,
+    "country": "US",
+    "state": "Rhode Island"
+  },
+  {
+    "name": "Silver Spring",
+    "lat": 41.2995381,
+    "lon": -74.8487786,
+    "country": "US",
+    "state": "Pennsylvania"
+  }
+]

@@ -8,7 +8,11 @@ function MultiLocationSection({
   getWeatherData,
 }) {
   return (
-    <div id="multiple-locations" className={styles.wrapper}>
+    <div
+      id="multiple-locations"
+      data-cy="mutltiple-locations"
+      className={styles.wrapper}
+    >
       {multipleLocations.length > 0 &&
         multipleLocations.map((data, index) => (
           <LocationOption
