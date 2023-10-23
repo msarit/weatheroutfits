@@ -8,12 +8,15 @@ describe("visiting weather app", () => {
 });
 
 describe("looking up weather info", () => {
+  beforeEach(() => {
+    cy.visit("http://localhost:3000");
+  });
+
   it("displays error message when invalid location entered", () => {
     // force the coordinates lookup to return an empty array
     // indicating no locations found
     cy.intercept("GET", "/coordinates*", []);
 
-    cy.visit("http://localhost:3000");
     cy.get('[data-cy="location-field"]').type("invalid location");
     cy.get('[data-cy="fetch"]').click();
 
@@ -25,7 +28,6 @@ describe("looking up weather info", () => {
     // containing 5 locations
     cy.intercept("GET", "/coordinates*", { fixture: "mockLatLonData.json" });
 
-    cy.visit("http://localhost:3000");
     cy.get('[data-cy="location-field"]').type("silver spring");
     cy.get('[data-cy="fetch"]').click();
 
@@ -41,7 +43,6 @@ describe("looking up weather info", () => {
     });
     cy.intercept("GET", "/weather*", { fixture: "mockWeatherData.json" });
 
-    cy.visit("http://localhost:3000");
     cy.get('[data-cy="location-field"]').type("silver spring");
     cy.get('[data-cy="fetch"]').click();
 

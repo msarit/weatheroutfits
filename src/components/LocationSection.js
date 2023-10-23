@@ -15,9 +15,6 @@ function LocationSection({ setWeatherDetails }) {
     );
     try {
       const latLonData = await latLonResponse.json();
-      if (latLonData.length > 0) {
-        console.log(JSON.stringify(latLonData));
-      }
 
       if (latLonData.length <= 0) {
         setDataError("Your entry did not return any locations; try again.");
@@ -43,7 +40,6 @@ function LocationSection({ setWeatherDetails }) {
           `http://localhost:${PORT}/weather?lat=${latLonData[0].lat}&lon=${latLonData[0].lon}`
         );
         const weatherData = await weatherResponse.json();
-        console.log(JSON.stringify(weatherData));
 
         setWeatherDetails({
           id: weatherData.weather[0].id,
